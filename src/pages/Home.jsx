@@ -21,8 +21,7 @@ const appartements = [
 
 function Home() {
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="card-wrapper">
       {appartements.map((apt, index) => (
         <Card
           key={`${apt.id}-${index}`}
