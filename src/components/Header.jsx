@@ -1,17 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/svg/.orangeLOGO.svg';
 
 function Header() {
+  const location = useLocation();
   return (
-    <React.Fragment>
-      <img src={logo} alt="logo Kasa" width={210}></img>
-      <nav>
-        <Link to="/">Accueil</Link>
-        <Link to="/About">A propos</Link>
-        <Link to="/Housing/42">Logements</Link>
+    <div className="header">
+      <img
+        className="header__logo"
+        src={logo}
+        alt="logo Kasa"
+        width={210}
+      ></img>
+      <nav className="header__nav">
+        <Link
+          className={location.pathname === '/' ? 'active' : 'nav-link'}
+          to="/"
+        >
+          Accueil
+        </Link>
+        <Link
+          className={location.pathname === '/About' ? 'active' : 'nav-link'}
+          to="/About"
+        >
+          A Propos
+        </Link>
       </nav>
-    </React.Fragment>
+    </div>
   );
 }
 

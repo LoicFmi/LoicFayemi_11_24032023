@@ -1,35 +1,24 @@
-import picture from '../assets/img/mountains.png';
+import React from 'react';
 import Card from '../components/Cards';
-
-const appartements = [
-  {
-    id: 123,
-    title: 'appartement 1',
-    cover: picture,
-  },
-  {
-    id: 456,
-    title: 'appartement 2',
-    cover: picture,
-  },
-  {
-    id: 789,
-    title: 'appartement 3',
-    cover: picture,
-  },
-];
+import Banner from '../components/Banner';
+import logements from '../logements.json';
+import sea from '../assets/img/sea.png';
 
 function Home() {
+  const bannerText = 'Chez vous, partout et ailleurs';
   return (
-    <div className="card-wrapper">
-      {appartements.map((apt, index) => (
-        <Card
-          key={`${apt.id}-${index}`}
-          title={apt.title}
-          picture={apt.cover}
-        />
-      ))}
-    </div>
+    <React.Fragment>
+      <Banner picture={sea} text={bannerText} />
+      <div className="card-wrapper">
+        {logements.map((logement, index) => (
+          <Card
+            key={`${logement.id}-${index}`}
+            title={logement.title}
+            cover={logement.cover}
+          />
+        ))}
+      </div>
+    </React.Fragment>
   );
 }
 

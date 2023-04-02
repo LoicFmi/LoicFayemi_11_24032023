@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 68px;
+  &__logo {
+  }
+  &__nav {
+    & a {
+      color: $colour-primary;
+      font-size: 24px;
+      font-weight: 500;
+      margin-left: 57px;
+    }
+  }
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.nav-link {
+  text-decoration: none;
+}

@@ -3,10 +3,15 @@ import logo from '../assets/svg/.whiteLOGO.svg';
 
 function Footer() {
   return (
-    <React.Fragment>
-      <img src={logo} alt="logo Kasa" width={122}></img>
-      <p>© 2020 Kasa. All rights reserved</p>
-    </React.Fragment>
+    <div className="footer">
+      <img
+        className="footer__logo"
+        src={logo}
+        alt="logo Kasa"
+        width={122}
+      ></img>
+      <p className="footer__text">© 2020 Kasa. All rights reserved</p>
+    </div>
   );
 }
 

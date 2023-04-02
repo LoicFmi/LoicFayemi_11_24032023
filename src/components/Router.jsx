@@ -15,7 +15,7 @@ function Routeur() {
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/housing/:housingId" element={<Housing />} />
+          <Route path="/housing" element={<Housing />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
