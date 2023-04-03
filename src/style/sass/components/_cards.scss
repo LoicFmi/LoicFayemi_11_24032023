@@ -1,15 +1,17 @@
 .card-wrapper {
   background-color: $colour-grey;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   border-radius: 25px;
-  padding: 56px 50px;
+  padding: 56px 0;
 }
 
 .card {
   position: relative;
   margin: 25px 30px;
-  width: 28%;
+  // width: 28%;
+  width: 340px;
   height: 340px;
   border-radius: 10px;
   &:after {
