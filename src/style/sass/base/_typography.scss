@@ -1,6 +1,9 @@
 body {
   margin: 0 100px;
   font-family: montserrat, sans-serif;
+  @include md {
+    margin: 0 20px;
+  }
 }
 
 code {

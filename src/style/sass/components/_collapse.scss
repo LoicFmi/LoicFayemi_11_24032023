@@ -1,0 +1,66 @@
+.collapse {
+  width: 80%;
+  margin: 0 auto;
+  @include md {
+    width: 100%;
+  }
+  &__title {
+    padding: 0 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 47px;
+    background-color: $colour-primary;
+    border-radius: 5px;
+    color: $colour-white;
+    font-size: 24px;
+    font-weight: 500;
+    z-index: 1;
+    @include md {
+      font-size: 18px;
+    }
+    @include sm {
+      height: 30px;
+      font-size: 13px;
+    }
+  }
+  &__arrow {
+    width: 24px;
+    @include sm {
+      width: 16px;
+    }
+  }
+  &__text {
+    position: relative;
+    padding: 36px 18px 19px 18px;
+    margin-top: -30px;
+    display: flex;
+    align-items: center;
+    background-color: $colour-grey;
+    border-radius: 5px;
+    color: $colour-primary;
+    font-size: 24px;
+    font-weight: 400;
+    z-index: -1;
+    @include md {
+      font-size: 18px;
+    }
+    @include sm {
+      font-size: 13px;
+    }
+  }
+}
+
+.arrow-up {
+  rotate: 0deg;
+}
+.arrow-down {
+  rotate: 180deg;
+}
+
+.open {
+  display: flex;
+}
+.closed {
+  display: none;
+}
