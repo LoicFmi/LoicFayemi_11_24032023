@@ -4,6 +4,9 @@
   align-items: center;
   margin-top: 40px;
   margin-bottom: 68px;
+  @include sm {
+    margin-bottom: 20px;
+  }
   &__logo {
     @include md {
       width: 170px;

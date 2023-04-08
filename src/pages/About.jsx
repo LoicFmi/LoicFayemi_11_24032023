@@ -31,15 +31,17 @@ function About() {
       <div className="banner" id="about-banner">
         <img className="banner__img" src={mountains} alt="" />
       </div>
-      <div className="collapse-wrapper">
+      <main className="collapse-wrapper">
         {content.map((content, index) => (
-          <Collapse
-            key={`${content.id}-${index}`}
-            title={content.title}
-            text={content.text}
-          />
+          <div className="collapse-about">
+            <Collapse
+              key={`${content.id}-${index}`}
+              title={content.title}
+              text={content.text}
+            />
+          </div>
         ))}
-      </div>
+      </main>
     </React.Fragment>
   );
 }

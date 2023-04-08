@@ -16,9 +16,17 @@ function Collapse({ title, text }) {
           width={24}
         ></img>
       </h1>
-      <p className={state ? 'collapse__text open' : 'collapse__text closed'}>
-        {text}
-      </p>
+      <div className={state ? 'collapse__text open' : 'collapse__text closed'}>
+        {Array.isArray(text)
+          ? text.map((item, index) => {
+              return (
+                <p className="collapse__text__item" key={index}>
+                  {item}
+                </p>
+              );
+            })
+          : text}
+      </div>
     </div>
   );
 }

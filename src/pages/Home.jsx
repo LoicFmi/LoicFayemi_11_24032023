@@ -9,15 +9,16 @@ function Home() {
   return (
     <React.Fragment>
       <Banner picture={sea} text={bannerText} />
-      <div className="card-wrapper">
+      <main className="card-wrapper">
         {logements.map((logement, index) => (
           <Card
             key={`${logement.id}-${index}`}
+            id={logement.id}
             title={logement.title}
             cover={logement.cover}
           />
         ))}
-      </div>
+      </main>
     </React.Fragment>
   );
 }

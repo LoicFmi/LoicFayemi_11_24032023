@@ -1,10 +1,9 @@
 .collapse {
-  width: 80%;
-  margin: 0 auto;
   @include md {
     width: 100%;
   }
   &__title {
+    cursor: pointer;
     padding: 0 18px;
     display: flex;
     justify-content: space-between;
@@ -35,7 +34,7 @@
     padding: 36px 18px 19px 18px;
     margin-top: -30px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     background-color: $colour-grey;
     border-radius: 5px;
     color: $colour-primary;
@@ -47,6 +46,9 @@
     }
     @include sm {
       font-size: 13px;
+    }
+    &__item {
+      margin: 3px 0;
     }
   }
 }
@@ -63,4 +65,16 @@
 }
 .closed {
   display: none;
+}
+
+.collapse-about {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.collapse-housing {
+  width: 47%;
+  @include sm {
+    width: 100%;
+  }
 }

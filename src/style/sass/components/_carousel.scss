@@ -1,0 +1,59 @@
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 415px;
+  margin-bottom: 30px;
+  @include md {
+    height: 350px;
+  }
+  @include sm {
+    margin-bottom: 15px;
+    height: 255px;
+  }
+  &__img {
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+    height: 100%;
+    @include sm {
+      border-radius: 10px;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    width: 70px;
+    @include md {
+      width: 50px;
+    }
+    @include sm {
+      width: 18px;
+    }
+    &__right {
+      rotate: 270deg;
+      right: 0%;
+    }
+    &__left {
+      rotate: 90deg;
+      left: 0%;
+    }
+  }
+  &__counter {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: $colour-white;
+    font-size: 18px;
+    font-weight: 500;
+    @include md {
+      font-size: 14px;
+    }
+    @include sm {
+      display: none;
+    }
+  }
+}
