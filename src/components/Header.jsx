@@ -20,8 +20,8 @@ function Header() {
           Accueil
         </Link>
         <Link
-          className={location.pathname === '/About' ? 'active' : 'nav-link'}
-          to="/About"
+          className={location.pathname === '/about' ? 'active' : 'nav-link'}
+          to="/about"
         >
           A Propos
         </Link>

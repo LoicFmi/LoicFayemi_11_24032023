@@ -244,10 +244,14 @@ code {
   height: 47px;
   background-color: #ff6060;
   border-radius: 5px;
-  color: #fff;
   font-size: 24px;
   font-weight: 500;
   z-index: 1;
+  color: transparent;
+  text-shadow: 0 0 0 #fff;
+}
+.collapse__title:focus {
+  outline: none;
 }
 @media (max-width: 769px) {
   .collapse__title {
