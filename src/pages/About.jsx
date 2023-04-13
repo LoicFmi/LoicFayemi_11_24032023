@@ -33,9 +33,8 @@ function About() {
       </div>
       <main className="collapse-wrapper">
         {content.map((content, index) => (
-          <div className="collapse-about">
+          <div className="collapse-about" key={`${content.id}-${index}`}>
             <Collapse
-              key={`${content.id}-${index}`}
               title={content.title}
               text={content.text}
             />
